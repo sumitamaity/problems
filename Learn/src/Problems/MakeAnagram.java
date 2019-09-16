@@ -19,6 +19,36 @@ public class MakeAnagram {
 		 
 		System.out.println(count);
 	}
+	
+	public String verifySubset(String s1, String s2) {
+		String a="YES";
+		if(s1.length()<s2.length()){
+		    
+		        for(int j=0; j<s1.length(); j++){
+		            if(s2.indexOf(s1.charAt(j))==-1){
+		           a="NO";
+		        }else{
+		            a="YES";
+		            break;
+		        }
+		    }
+		      }
+		    else
+		    if(s1.length()>s2.length()){
+		        for(int j=0; j<s2.length(); j++){
+		            if(s1.indexOf(s2.charAt(j))==-1){
+		           a="NO";
+		        }else{
+		            a="YES";
+		            break;
+		        }
+		    
+		    }
+		    }
+		     return a;
+		    }
+	
+	
 	public void makeAnagramFromStringA(String a, String b) {
 		int[] count1= new int[26];
 		int[] count2= new int[26];
@@ -43,6 +73,8 @@ public class MakeAnagram {
 	public static void main(String[] args) {
 		MakeAnagram ma = new MakeAnagram();
 		//ma.makeAnagramFromString("sumita", "maitym");  //should not work as we need frequency of the character to be same in both cases
-		ma.makeAnagramFromStringA("sumitam", "maity");              
+		//ma.makeAnagramFromStringA("sumitam", "maity");   
+		String a =ma.verifySubset("aardvark", "apple");
+		System.out.println(a);
 	}
 }
