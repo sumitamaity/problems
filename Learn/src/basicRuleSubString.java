@@ -3,7 +3,7 @@ public class basicRuleSubString {
 
 	static int isSubString(String s1, String s2) {
 		
-		{ 
+		
 	        int M = s1.length(); 
 	        int N = s2.length(); 
 	      
@@ -22,7 +22,7 @@ public class basicRuleSubString {
 	        } 
 	      
 	        return -1; 
-	        }
+	        
 	    } 
 	      
 	

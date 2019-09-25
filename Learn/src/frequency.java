@@ -9,17 +9,17 @@ public class frequency {
 		
 		for(int i=0; i<str.length(); i++) {
 			count[str.charAt(i)]++;
-			g=count[str.charAt(i)];
-			//System.out.println(g);
-		}
-		for(int i=0; i<str.length();i++) {
+			/*
+			 * g=count[str.charAt(i)]; System.out.println(g);
+			 */
 			min=count[str.charAt(0)];
 			if(count[str.charAt(i)]<=min) {
 				min=count[str.charAt(i)];
-				System.out.println(str.charAt(i));
-		break;
-	}
+				g=i;
+	
 		}
+		}
+		System.out.println(min+" "+str.charAt(g));
 	}
  public static void main(String[] args) {
 	char[] a= {'a','o','m','o','j','o','d','k','j'};
@@ -50,11 +50,11 @@ public class frequency {
 	
 	for(int i=0; i<a.length;i++) {
 		if(fr[i]!=-1)
-			
-		System.out.println(a[i]+"      "+fr[i]);
+		System.out.println();	
+		//System.out.println(a[i]+"      "+fr[i]);
 		
 	}
-	anno1("sumitamaity");
+	anno1("shsumitaumaity");
 }
  
 }
