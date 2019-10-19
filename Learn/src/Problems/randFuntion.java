@@ -23,7 +23,8 @@ public class randFuntion {
 	
 	public static void main(String[] args) {
 		randFuntion rf= new randFuntion();
-		int a=rf.getRandomNum(2,7); System.out.println(a);
+		int a=rf.getRandomNum(2,7); 
+		System.out.println(a);
 		rf.getRandomNumClass();
 	    int s= rf.getRandomNumofnDigit(5);
 	    System.out.println(s);

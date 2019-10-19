@@ -1,16 +1,16 @@
-
+//Provided a sum, find the 2 values with minimum difference, that can be summed up to get the sum value 
 public class MinDiff {
 	public int minDiff(int sum) {
 		int min=0;int res=0;
 		int i;
 		for(i=0; i<=sum; i++) {
-			res=sum-i;
-			int count=res-i;
-			if(min>=count)	{
+			res=sum-i;                    
+			int count=res-i;             // valu1 =i value 2=sum-i difference between them is {(sum-i)-i}
+			if(min>=count)	
+			{
 				min=count;
 				System.out.println(i+" "+res+" "+Math.abs(min));
 				break;
-				
 			}
 			
 		}

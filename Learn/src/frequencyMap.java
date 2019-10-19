@@ -40,7 +40,7 @@ for(int i=0; i<a.size(); i++) {
 		frequencyMap em=new frequencyMap();
 		List<Integer> a= new ArrayList<Integer>();
 		@SuppressWarnings("resource")
-	int value=0;
+		int value=0;
 		Scanner sc=new Scanner(System.in);
 		for(int i=0; i<4;i++) {
 			

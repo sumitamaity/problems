@@ -64,7 +64,7 @@ public class MakeAnagram {
 		int result=0; 
 		for (int i = 0; i < 26; i++) {
 			result+= Math.abs(count1[i]-count2[i]);
-			System.out.println(result);
+			//System.out.println(result);
 		}
 		System.out.println(result);
 	}
@@ -73,7 +73,7 @@ public class MakeAnagram {
 	public static void main(String[] args) {
 		MakeAnagram ma = new MakeAnagram();
 		//ma.makeAnagramFromString("sumita", "maitym");  //should not work as we need frequency of the character to be same in both cases
-		//ma.makeAnagramFromStringA("sumitam", "maity");   
+		ma.makeAnagramFromStringA("sumitam", "maity");   
 		String a =ma.verifySubset("aardvark", "apple");
 		System.out.println(a);
 	}

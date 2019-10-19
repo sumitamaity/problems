@@ -5,9 +5,9 @@ public class Palindrome {
 	public void StrPali(String input) {
 		String strRev = "";
 		char[] c= input.toCharArray();
-		for(int i=input.length()-1; i>=0; i--){
+		for(int i=input.length()-1; i>=0; i--)
+		{
 			strRev=strRev+input.charAt(i);
-			
 		}
 		
 		if(input.equals(strRev)) {

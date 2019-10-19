@@ -22,8 +22,7 @@ public class Arrays {
 		System.out.println(a[i]);
 		a[i]= a[i-1];
 		
-		
-	}
+			}
 	for(int i=0; i<a.length-1;i++)
 	System.out.println(a[i]);
 	}

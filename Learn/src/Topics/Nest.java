@@ -1,3 +1,4 @@
+package Topics;
 
 public class Nest {
 
@@ -62,7 +63,6 @@ public class Nest {
 			n.display();
 			Nest.inner ni= n.new inner();
 			
-	
 			
 		    Nest.StClass ns= new Nest.StClass();
 			

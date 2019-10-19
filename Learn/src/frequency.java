@@ -8,7 +8,7 @@ public class frequency {
 		char count[]= new char[256];
 		
 		for(int i=0; i<str.length(); i++) {
-			count[str.charAt(i)]++;
+			count[str.charAt(i)]++;   //for char array we can use count[str.charAt(i)]++;
 			/*
 			 * g=count[str.charAt(i)]; System.out.println(g);
 			 */
@@ -25,21 +25,23 @@ public class frequency {
 	char[] a= {'a','o','m','o','j','o','d','k','j'};
 	int max=0; int pos=0;
 	int[] fr=new int[a.length];
-	
+	boolean visited=false;
 	for (int i = 0; i < a.length; i++) {
 		int count=1;
 		for(int j=i+1; j<a.length; j++) {
 			if(a[i]==a[j]) {
 				count++;
 				fr[j]=-1;  // to avoid visiting the same element again
+				//visited=true;
 			}
 		}
 		if(fr[i]!=-1) {
+	
 			fr[i]=count;
-			
+			System.out.println(fr[i]+" frequency");
 		}
-		if(count>max) {
-			max=count;
+		if(fr[i]>max) {
+			max=fr[i];
 			pos=i;
 		}
 		
@@ -50,11 +52,11 @@ public class frequency {
 	
 	for(int i=0; i<a.length;i++) {
 		if(fr[i]!=-1)
-		System.out.println();	
-		//System.out.println(a[i]+"      "+fr[i]);
 		
+		System.out.println(a[i]+"      "+fr[i]);
+			
 	}
-	anno1("shsumitaumaity");
+	//anno1("shsumitaumaity");
 }
  
 }

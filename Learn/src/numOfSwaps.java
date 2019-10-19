@@ -22,6 +22,8 @@ public class numOfSwaps {
 		
 	}
 	
+	//maximum number of element that can be summed up for the given amount
+	//if minimum is required then the sorting should be in 
 	public void maximumnumberOfElement(int a[], int amount) {
 		int sum=0;
 		int count=0;

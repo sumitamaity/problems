@@ -4,13 +4,12 @@ public class FirstCharCap {
 	public void GetFirstCap(String str) {
 		char a = ' ';
 		StringBuffer s= new StringBuffer();
-		for(int i=0; i< str.length(); i++) {
+		for(int i=1; i< str.length(); i++) {
 			 // If previous character is space and current 
             // character is not space then it shows that 
             // current letter is the starting of the word
-			if(a ==' ' && str.charAt(i)!=' ') {
-				
-				/*if (ch[i] >= 'a' && ch[i] <= 'z') { 
+			//if(a ==' ' && str.charAt(i)!=' ') {
+			if(str.charAt(i-1)==' ' && str.charAt(i)!=' ') {				/*if (ch[i] >= 'a' && ch[i] <= 'z') { 
 					  
                     // Convert into Upper-case 
                     ch[i] = (char)(ch[i] - 'a' + 'A'); */

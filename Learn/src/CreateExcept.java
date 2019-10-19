@@ -7,7 +7,7 @@ public class CreateExcept extends Exception{
 	}
 	public CreateExcept(String mesage) {
 		
-		super(mesage);
+		super(mesage); //this will call getMessage ofexception class
 		
 	}
 	

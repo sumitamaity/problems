@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class SortByValuMap {
 
+	@SuppressWarnings("unchecked")
 	public HashMap sortinjavasev() {
 		Map<String, Integer> mp= new HashMap<String, Integer>();
 		mp.put("abc", 12);
