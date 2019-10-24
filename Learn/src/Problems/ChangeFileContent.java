@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+
 public class ChangeFileContent {
 	static Properties prop = new Properties();
 	public void run() throws Exception {
@@ -102,7 +104,7 @@ public class ChangeFileContent {
 	      bw.close();
 		  br.close();
 		  
-		  FileUtility.copyFileOverWrite(currFile1, currFile);
+		  FileUtils.copyFile(currFile1, currFile);
 			if(currFile1.exists())
 				currFile1.delete();
 		}catch (Exception e) {
@@ -144,7 +146,7 @@ public class ChangeFileContent {
 	        
 	      bw.close();
 		  br.close();
-		  FileUtility.copyFileOverWrite(currFile1, currFile);
+		  FileUtils.copyFile(currFile1, currFile);
 		}
 		catch(Exception e){
 			System.out.println("Unable to modify the file "+filepath);

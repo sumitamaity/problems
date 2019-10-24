@@ -1,6 +1,48 @@
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Palindrome {
+	
+	public static boolean checkPalindrome(String str) {
+		String a="";
+		for(int i=str.length()-1; i>=0; i--) {
+		a=a+str.charAt(i);	
+		
+		}
+		//System.out.println(a);
+		if(str.equals(a)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public static void checkSubSetPali() {
+		String a="DADAD";
+		int count=0;
+		Set<String> s1= new LinkedHashSet<String>();
+		//System.out.println(checkPalindrome(a));
+	    for(int i=0; i<=a.length();i++) {
+	    	for(int j=i+1; j<a.length();j++) {
+	    		String s= a.substring(i,j);
+	    		boolean a1=checkPalindrome(a.substring(i,j));
+	    	if(checkPalindrome(a.substring(i,j))) {
+	    		count++;
+	    		s1.add(a.substring(i,j));
+	    		//System.out.println(a.substring(i,j));
+	    	}
+	    	
+	    }
+	    	
+	}
+	    System.out.println("total number of subsets "+count);
+	    System.out.println(s1);
+	    System.out.println("unique subsets "+s1.size());
+	    
+	}
+
 
 	public void StrPali(String input) {
 		String strRev = "";

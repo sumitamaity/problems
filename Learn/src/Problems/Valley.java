@@ -13,8 +13,8 @@ public class Valley {
 			else if(a.charAt(i)=='D') {
 				lvl--;
 			}
-			if(lvl==0 && a.charAt(i)=='U') {   // AS WE NEED TO FIND THE NUMBER OF VALLEY ONLY we'll see how many times it is coming up lvl should be 0 with U 
-				n++;
+			if(lvl==0 && a.charAt(i)=='U') {   // AS WE NEED TO FIND THE NUMBER OF VALLEY ONLY we'll see how many times it is coming up
+				n++;						  // lvl should be 0 with U 
 			}
 		}
 		return n;

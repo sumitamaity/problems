@@ -12,8 +12,7 @@ public class MinDiff {
 				System.out.println(i+" "+res+" "+Math.abs(min));
 				break;
 			}
-			
-		}
+			}
 		return i;
 	}
 	
@@ -24,7 +23,6 @@ public class MinDiff {
 				 if(Math.abs(sum[i]-sum[j])<=min)
 				 {
 					min=Math.abs(sum[i]-sum[j]);
-					
 				}
 			}
 		}

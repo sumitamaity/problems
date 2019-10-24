@@ -1,8 +1,9 @@
-
 public class practice {
    //program to find the first non repeating character in a string
 	public void firstNonRpeatingChar() {
-		String s= "smitamascity";	int i;char ch = 0;
+		String s= "smitamascity";	
+		int i;
+		char ch = 0;
 		boolean flag=false;
 		char[] count=new char[256];
 			for(i=0; i<s.length(); i++) {
