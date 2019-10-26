@@ -19,13 +19,11 @@ public class ChangeFileContent {
 	public void run() throws Exception {
 
 
-		//String childsPath = "Z:\\racheeka_R13Silver\\faat\\fusionapps\\hcm\\oats\\src\\assets";
-		String propPath = "Z:\\summaity_cd\\faat\\fusionapps\\hcm\\oats\\src\\objlib";
-		/*System.out.println("Started");
-		findFile("script.java", new File(childsPath));
-		*/
+		
+		String propPath = ;
+		
 		String propFiles="";
-		String[] li = {"PAY_Define Person Costing_Child.properties","PAY_Define PPM_Child.properties","PAY_DSS Create DIR Card_Child.properties","PAY_Edit Element Entry_Child.properties","PAY_Manage Ded Card-TRU Assn_Child.properties","Pay_ManageBalanceExceptions_Child.properties"};
+		String[] li = {};
 		List<String> list = new ArrayList<String>();
 		for(int i = 0;i<li.length;i++){
 			list.add(li[i].toLowerCase());
@@ -59,9 +57,7 @@ public class ChangeFileContent {
             	if(fil.getParentFile().getName().startsWith("PAY_") || fil.getParentFile().getName().startsWith("Pay_"))
             	{
             		
-            		/*String pathToGive=fil.getPath().substring(fil.getPath().indexOf("faat\\")+5, fil.getPath().lastIndexOf("\\"));
-            		System.out.println(pathToGive+" ");
-            		*/
+            		
             		changeContent(fil.getPath());
             	}
             }
@@ -71,11 +67,11 @@ public class ChangeFileContent {
 	
 	public static void changeContent(String filepath) throws IOException, FileNotFoundException
     {
-		prop.load(new FileInputStream(new File("F:\\HCM\\hpatha\\java utils\\code for changing child and properties content\\keyproperties.properties")));
+		prop.load(new FileInputStream(new File("somepath")));
 		
 		File currFile = new File(filepath);
 		File currFile1 = new File(filepath.replaceFirst("script.java", "script_tmp.java"));
-		//File currFile1 = new File("D:\\Test\\childs\\PAY_test\\test_temp.java");
+		
 		try{
 		BufferedReader br = new BufferedReader(new FileReader(currFile)); 
 		BufferedWriter bw = new BufferedWriter(new FileWriter(currFile1));
@@ -113,11 +109,10 @@ public class ChangeFileContent {
     }
 	public static void changeContenttxt(String filepath) throws IOException, FileNotFoundException
     {
-		prop.load(new FileInputStream(new File("F:\\HCM\\hpatha\\java utils\\code for changing child and properties content\\keyproperties.properties")));
+		prop.load(new FileInputStream(new File("somepath")));
 		
 		File currFile = new File(filepath);
 		File currFile1 = new File(filepath.replaceFirst(".properties", "_tmp.properties"));
-		//File currFile1 = new File("D:\\Test\\props\\test_temp.txt");
 		
 		try{
 		BufferedReader br = new BufferedReader(new FileReader(currFile)); 
@@ -161,4 +156,4 @@ public class ChangeFileContent {
 	}
 }
 
-}
+
