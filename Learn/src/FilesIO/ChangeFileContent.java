@@ -1,4 +1,4 @@
-package Problems;
+package FilesIO;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
