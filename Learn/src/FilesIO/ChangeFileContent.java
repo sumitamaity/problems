@@ -12,18 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
 
 public class ChangeFileContent {
 	static Properties prop = new Properties();
-	public void run() throws Exception {
-
-
+	public static void main(String args[]) throws Exception {
+		String propPath = "C:\\Users\\summaity.ORADEV\\Documents\\hundred";
 		
-		String propPath = ;
-		
-		String propFiles="";
-		String[] li = {};
+		//String propFiles="1.text";
+		String[] li = {"7.txt", "8.txt", "9.txt", "10.txt", "11.txt"};
 		List<String> list = new ArrayList<String>();
 		for(int i = 0;i<li.length;i++){
 			list.add(li[i].toLowerCase());
@@ -54,18 +50,17 @@ public class ChangeFileContent {
             }
             else if (name.equalsIgnoreCase(fil.getName()))
             {
-            	if(fil.getParentFile().getName().startsWith("PAY_") || fil.getParentFile().getName().startsWith("Pay_"))
+            	if(fil.getParentFile().getName().startsWith("hundred"))
             	{
             		
-            		
-            		changeContent(fil.getPath());
+            		changeFileContent(fil.getPath());
             	}
             }
         }
         //System.out.println("Co output "+pathToGive);
     }
 	
-	public static void changeContent(String filepath) throws IOException, FileNotFoundException
+	public static void changeFileContent(String filepath) throws IOException, FileNotFoundException
     {
 		prop.load(new FileInputStream(new File("somepath")));
 		
@@ -86,11 +81,9 @@ public class ChangeFileContent {
 				  if(st.contains((String)keystr))
 					  {
 					  st = st.replaceAll((String) keystr, prop.getProperty((String) keystr));
-					  //bw.write(st+"\n");
+					  
 					  System.out.println("replaced "+keystr+" with "+prop.getProperty((String) keystr)+"in the file "+filepath);
 					  }
-				  /*else
-					  bw.write(st+"\n");*/
 			  	}
 			  bw.write(st+"\n");
 			  
@@ -100,19 +93,21 @@ public class ChangeFileContent {
 	      bw.close();
 		  br.close();
 		  
-		  FileUtils.copyFile(currFile1, currFile);
-			if(currFile1.exists())
-				currFile1.delete();
+		  //FileUtils.copyFile(currFile1, currFile);
+		  
+		  if(currFile.exists())
+				currFile.delete();
+			currFile1.renameTo(currFile);
 		}catch (Exception e) {
 			System.out.println("Unable to modify the file "+filepath);
 		}
     }
 	public static void changeContenttxt(String filepath) throws IOException, FileNotFoundException
     {
-		prop.load(new FileInputStream(new File("somepath")));
+		prop.load(new FileInputStream(new File("C:\\Users\\summaity.ORADEV\\Documents\\hundred\\1.txt")));
 		
 		File currFile = new File(filepath);
-		File currFile1 = new File(filepath.replaceFirst(".properties", "_tmp.properties"));
+		File currFile1 = new File(filepath.replaceFirst(".txt", "_tmp.txt"));
 		
 		try{
 		BufferedReader br = new BufferedReader(new FileReader(currFile)); 
@@ -122,33 +117,32 @@ public class ChangeFileContent {
 		  String st; 
 		  while ((st = br.readLine()) != null) 
 		    {
-			  //System.out.println(st);
+			 
 			  for (Object keystr : prop.keySet()) {
 				
 				  if(st.contains((String)keystr))
 				  {
 					  st = st.replaceAll((String) keystr, prop.getProperty((String) keystr));
-					  //bw.write(st+"\n");
+					  
 					  System.out.println("replaced "+keystr+" with "+prop.getProperty((String) keystr)+"in the file "+filepath);
 				  }
-				  /*else
-					  bw.write(st+"\n"); */
+				 
 			  	} 
 			  bw.write(st+"\n");
 			  
 		    }
-		 
-	        
-	      bw.close();
+		  bw.close();
 		  br.close();
-		  FileUtils.copyFile(currFile1, currFile);
+		  
+		  
 		}
 		catch(Exception e){
 			System.out.println("Unable to modify the file "+filepath);
 		} 
-		if(currFile1.exists())
-			currFile1.delete();
 		
+		if(currFile.exists())
+			currFile.delete();
+		currFile1.renameTo(currFile);
     }
 	
 	
