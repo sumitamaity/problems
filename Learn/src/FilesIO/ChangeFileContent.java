@@ -1,5 +1,7 @@
 package FilesIO;
+import FilesIO.jFrameUI;
 
+import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,11 +17,15 @@ import java.util.Properties;
 
 public class ChangeFileContent {
 	static Properties prop = new Properties();
+	
 	public static void main(String args[]) throws Exception {
-		String propPath = "C:\\Users\\summaity.ORADEV\\Documents\\hundred";
+		jFrameUI jf= new jFrameUI();
+		Object a = null;
+		ActionEvent e= new ActionEvent(a, 0, null);
+		String propPath =  jf.actionPerform(e);//"C:\\Users\\summaity.ORADEV\\Documents\\hundred";
 		
 		//String propFiles="1.text";
-		String[] li = {"7.txt", "8.txt", "9.txt", "10.txt", "11.txt"};
+		String[] li = {"9.txt", "10.txt", "11.txt", "12.txt", "13.txt"};
 		List<String> list = new ArrayList<String>();
 		for(int i = 0;i<li.length;i++){
 			list.add(li[i].toLowerCase());
